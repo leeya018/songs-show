@@ -5,7 +5,8 @@ const SongCard: React.FC<SongItem> = ({ id, image, title, description }) => {
   const router = useRouter();
   return (
     <div
-      className="cursor-pointer bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg w-64 h-64 relative"
+      className="cursor-pointer bg-gray-800 text-white rounded-lg overflow-hidden shadow-lg
+       w-full h-64 relative"
       onClick={() => router.push(`/song/${id}`)}
     >
       <img

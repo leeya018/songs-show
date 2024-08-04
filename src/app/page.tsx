@@ -11,13 +11,16 @@ export default function HomePage() {
     <div className="w-full h-screen overflow-auto">
       <Slideshow />
       <div className="mx-5 md:mx-10 lg:mx-20 flex justify-center mb-10 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 gap-5 mt-8 ">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+          xl:grid-cols-4 gap-5 mt-20 "
+        >
           {songList.map((song, index) => (
             <SongCard key={index} {...song} />
           ))}
         </div>
       </div>
-      <div className="flex justify-center mb-20 ">
+      <div className="flex justify-center my-20 ">
         <CreatorCard />
       </div>
       <Footer />
