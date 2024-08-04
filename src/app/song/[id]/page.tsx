@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import SongLyrics from "@/components/SongLyrics";
 import { songList } from "@/util";
 import { useParams, useRouter } from "next/navigation";
@@ -15,7 +16,7 @@ const SongPage: React.FC = () => {
   const song = songList.find((song) => song.id === id);
   if (!song) throw new Error(`song with id : ${id} not exist`);
   return (
-    <div className="h-screen w-full">
+    <div className="w-full h-screen overflow-auto">
       <div className="relative w-full h-[40%]">
         <button
           onClick={handleBack}
@@ -32,7 +33,7 @@ const SongPage: React.FC = () => {
           {song.title}
         </div>
       </div>
-      <div className="px-5 w-full flex justify-center md:px-10 lg:px-20 mt-10 ">
+      <div className="px-5 mb-10 w-full flex justify-center md:px-10 lg:px-20 mt-10 ">
         <div className="flex w-full flex-col  md:flex-row  gap-10 ">
           <SongLyrics lyrics={song.lyrics} lyricsEn={song.lyricsEn} />
 
@@ -52,11 +53,16 @@ const SongPage: React.FC = () => {
             </div>
             <div className="mt-10 flex w-full flex-col items-center p-4 rounded-md ">
               <h2 className="text-xl font-bold mb-2">Credits</h2>
-              <p className="whitespace-pre-line">{song.credits}</p>
+              <ul>
+                {song.credits.map((credit, key) => (
+                  <li key={key}>{credit}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

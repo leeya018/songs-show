@@ -5,19 +5,37 @@ interface Slide {
 
 export const slides: Slide[] = [
   {
-    image: "/images/1.jpg",
-    text: "Soundtracks from Love Island (US) - 2196 Songs",
+    image: "/images/slides/jerusalem.jpg",
+    text: "My aunt is a talented therapist based in Micmash, Israel. She has dedicated her life to helping others navigate their emotional and mental well-being, offering compassionate and insightful guidance to her clients",
   },
   {
-    image: "/images/2.jpg",
-    text: "Soundtracks from Another Show - 1500 Songs",
+    image: "/images/slides/cords.jpg",
+    text: "Beyond her therapeutic work, she channels her creativity into songwriting and singing. Her music reflects deep emotions and the complexities of life, resonating with those who hear it.",
   },
   {
-    image: "/images/3.jpg",
-    text: "Soundtracks from Another Show - 1400 Songs",
+    image: "/images/slides/mike.jpg",
+    text: "Living in the peaceful surroundings of Micmash, she draws inspiration from her environment and her experiences, weaving them into both her therapy practice and her music, creating a unique and holistic approach to healing and expression.",
   },
   // Add more slides as needed
 ];
+interface Creator {
+  image: string;
+  name: string;
+  description: string[];
+}
+export const creator: Creator = {
+  image: "/images/orly1.jpg",
+  name: "Orly Weissman",
+  description: [
+    "מתמחה בטיפול משולב תנועה מגע תזונה ורגש. מטפלת בשיטת אלבאום, מטפלת בקשיי תיפקוד פיזי וריגשי, בעיות קשב וריכוז ולמידה, ילדים ומבוגרים. טיפול זוגי, יחיד, פסיכותרפיה חסידית, טיפול בתנועה ומגע - פילאטיס, יוגה, ביילא פיטנס דנס, שיעורי מחול לנשים נערות וילדות.",
+
+    "אהלן עולם! רוצה לחצות אותך, להגיע אל לב כולם, שישמעו, שיקשיבו, שידעו שזה בסדר להתבטא ולא לחתום שהכול טוב או רע. יש דרך ויש לה המון ערך. כותבת חיים מלשמוע על אחרים, כותבת כי בעצמי חוצה אוקיינוסים כל רגע וגם בין רגע לרגע. מלחינה, שרה ויש לי כבר כמה שירים בערוצים כמו יוטיוב, אפל, ספוטיפיי ועוד.",
+
+    "גדלתי בשכונת מורשה מוסררה בירושלים. קמתי ונעמדתי על הרגליים והיום זו שכונת יוקרה, המחירים שברו את התקרה. התושבים התחלפו מקיבוץ גלויות לברסלברים מלא ילדים והשכונה מחדש קמה לתחיה! ואימי בתוך כולם שומרת על הזכויות שלנו שם. גדלתי בין קידוש של ליל שבת, מואזין מהמסגד ופעמוני כנסייה. הכל הצטלצל ביחד כשמדי פעם שמעתי קריאה בתורה פיוט או אלתור על דרבוקה של אימי שתחיה ודודה של אבי זיכרם לברכה. שמעתי עברית, צרפתית, ספרדית, יידיש, ערבית מרוקאית, אנגלית. וכל זה השפיע הרבה טובה.",
+
+    "מוזמנים לחפש את שיריי: 'חרות' - זכותנו על הארץ, אימא אדמה, מולדת שלנו! 'מה זו אהבה' - הפער בין תחילת הדרך לדרך, התיסכול והייאוש. 'עליות ומורדות' - בחיי זוג. 'עמוק בתוך ליבך' - שפה מחברת, מעוררת את הלב, יכולה לרפא הרבה מאוד כאב ולקרב. 'לו הייתי ציפור' - כולנו זקוקים ליד שתנחה אותנו לחוף מבטחים. אם אהבתם, מוזמנים להגיב.",
+  ],
+};
 
 export interface SongItem {
   id: string;
@@ -33,7 +51,7 @@ export interface SongItem {
 export const songList: SongItem[] = [
   {
     id: "1",
-    image: "/images/1.jpg", // Replace with the actual path to the image
+    image: "/images/freedom.png", // Replace with the actual path to the image
     title: "חירות",
     description:
       "חופש, חרות, במובן העמוק,מגיע אחרי דרך ארוכה. זו זכות ובחירה ועבודה פנימית עמוקה ואינטנסיבית..בפן האישי והלאומי. חשוב להכיר בזכות הזו שניתנה, זה גדול מכל אחד ואחת כאן ובעולם הנשמה שואפת למקום הטבעי שלה. אומי = אימי וגם האומה שלי. אומה- אומה כפשוטו, שלה שלו וגם אם. אומק= אימא אדמה ואם שלך ! כפי שאין ספק מי זו האם, כך אין ספק שזה הבית האדמה שלנו שלך שלך!",
@@ -110,7 +128,7 @@ export const songList: SongItem[] = [
   },
   {
     id: "2",
-    image: "/images/2.jpg",
+    image: "/images/deep.png",
     title: "עמוק בתוך ליבך",
     description: "10 Songs",
     youtubeLink: "https://www.youtube.com/embed/mItJYbn_qFA",
@@ -209,7 +227,7 @@ export const songList: SongItem[] = [
 
   {
     id: "3",
-    image: "/images/1.jpg", // Replace with the actual path to the image
+    image: "/images/love.png", // Replace with the actual path to the image
     title: " מה זו אהבה",
     description: "5 Songs",
     youtubeLink: "https://www.youtube.com/embed/rjlyVWJA31I",
@@ -294,7 +312,7 @@ export const songList: SongItem[] = [
 
   {
     id: "4",
-    image: "/images/2.jpg",
+    image: "/images/ups_downs.png",
     title: "עליות ומורדות",
     description: "10 Songs",
     youtubeLink: "https://www.youtube.com/embed/En-yPwDxLiU",
@@ -380,7 +398,7 @@ export const songList: SongItem[] = [
 
   {
     id: "5",
-    image: "/images/1.jpg", // Replace with the actual path to the image
+    image: "/images/bird.png", // Replace with the actual path to the image
     title: "לו הייתי ציפור",
     description: "5 Songs",
     youtubeLink: "https://www.youtube.com/embed/sykA_Q2mMns",
