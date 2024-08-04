@@ -32,8 +32,8 @@ const SongPage: React.FC = () => {
           {song.title}
         </div>
       </div>
-      <div className="w-full flex justify-center px-20 mt-10 ">
-        <div className="flex w-full   gap-10 ">
+      <div className="px-5 w-full flex justify-center md:px-10 lg:px-20 mt-10 ">
+        <div className="flex w-full flex-col  md:flex-row  gap-10 ">
           <SongLyrics lyrics={song.lyrics} lyricsEn={song.lyricsEn} />
 
           <div className="flex-1">

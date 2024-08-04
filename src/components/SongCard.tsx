@@ -16,7 +16,6 @@ const SongCard: React.FC<SongItem> = ({ id, image, title, description }) => {
       />
       <div className="p-4 absolute bottom-0 left-0">
         <h2 className="text-lg font-bold">{title}</h2>
-        <p className="text-sm">{description}</p>
       </div>
     </div>
   );
