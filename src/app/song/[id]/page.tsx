@@ -50,6 +50,10 @@ const SongPage: React.FC = () => {
               <h2 className="text-xl font-bold mb-2">Descripiton</h2>
               <p className="whitespace-pre-line">{song.description}</p>
             </div>
+            <div className="mt-10 flex w-full flex-col items-center p-4 rounded-md ">
+              <h2 className="text-xl font-bold mb-2">Credits</h2>
+              <p className="whitespace-pre-line">{song.credits}</p>
+            </div>
           </div>
         </div>
       </div>
